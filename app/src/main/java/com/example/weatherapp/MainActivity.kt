@@ -21,6 +21,11 @@ class MainActivity : AppCompatActivity() {
         viewModel.weatherResp.observe(this,{weather->
             binding.apply {
 
+                tvTemperature.text = weather.temperature
+                tvDescription.text = weather.description
+                tvWind.text = weather.wind
+                tvCity.text = "Luanda"
+
             }
 
         })
